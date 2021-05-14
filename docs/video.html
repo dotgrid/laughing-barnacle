@@ -1,0 +1,28 @@
+<html>
+  
+  <video
+  id="mux-default"
+  class="video-js vjs-16-9"
+  controls
+  preload="auto"
+  width="100%"
+  poster="https://image.mux.com/DS00Spx1CV902MCtPj5WknGlR102V5HFkDe/thumbnail.jpg"
+/>
+
+<script type="text/javascript">
+  const player = videojs('mux-default', {
+    "timelineHoverPreviews": true,
+    "plugins": {
+      "mux": {
+        "data": {
+          "env_key": "ENV_KEY",
+          "video_title": "My Great Video"
+        }
+      }
+    }
+  });
+
+  player.src({ type: 'video/mux', src: 'DS00Spx1CV902MCtPj5WknGlR102V5HFkDe' });
+</script>
+  
+</html>
